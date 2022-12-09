@@ -2,12 +2,6 @@ html {
   font-size: 62.5%;
 }
 
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-
 body {
   font-size: 1.6rem;
   font-family: Poppins, sans-serif;
@@ -78,7 +72,7 @@ li {
 @media screen and (max-width: 560px) {
   .col--7 {
     flex-basis: 100%;
-    max-width: 50%;
+    max-width: 100%;
   }
 }
 
@@ -416,6 +410,11 @@ li {
 }
 .features__images-left {
   width: auto;
+}
+@media screen and (max-width: 560px) {
+  .features__images-left {
+    width: 100%;
+  }
 }
 .features__list {
   line-height: 2;

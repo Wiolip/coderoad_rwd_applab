@@ -3,11 +3,7 @@ html {
 
 }
 
-*,
-::after,
-::before {
-    box-sizing: border-box;
-}
+
 
 body {
     font-size: $text;
@@ -111,7 +107,7 @@ li {
 
     @include mq(s) {
         flex-basis: 100%;
-        max-width: 50%;
+        max-width: 100%;
 
     }
 }

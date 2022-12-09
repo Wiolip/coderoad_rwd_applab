@@ -201,7 +201,11 @@
 
     &__images-left {
         width: auto;
+        @include mq(s) {
+            width: 100%;
+        }
     }
+
 
     &__list {
         line-height: 2;
@@ -421,7 +425,7 @@
     &__title {
         color: $reverse;
         @include mq(m) {
-            
+
             text-align: center;
         }
         @include mq(s) {
