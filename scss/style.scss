@@ -200,11 +200,7 @@
     }
 
     &__images-left {
-        padding: 10rem;
-
-        @include mq(s) {
-            padding: 4rem;
-        }
+        width: auto;
     }
 
     &__list {
@@ -253,7 +249,7 @@
     text-align: center;
     color: $reverse;
 
-    @include mq(s) {
+    @include mq(m) {
         margin-top: 0;
         padding: 8rem 0;
     }
@@ -273,13 +269,21 @@
     &-container {
         padding: 0 18rem;
 
+        @include mq(m) {
+            padding: 0 4rem;
+        }
+
         @include mq(s) {
-            padding: 0 2rem;
+            padding: 0 4rem;
         }
     }
 
     &__header {
         color: $reverse;
+
+        @include mq(m) {
+            font-size: 3.6rem;
+        }
 
         @include mq(s) {
             font-size: 3rem;
@@ -300,6 +304,11 @@
         color: $rating;
     }
 }
+
+
+
+
+
 
 //pricing
 
@@ -322,6 +331,9 @@
     &__title {
         font-size: $h2;
 
+        @include mq(m) {
+            font-size: 3.6rem;
+        }
         @include mq(s) {
             font-size: 3rem;
         }
@@ -391,7 +403,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 10rem 0;
+    padding: 16rem 0;
 
     @include mq(s) {
         padding: 4rem 0;
@@ -408,10 +420,13 @@
 
     &__title {
         color: $reverse;
-
+        @include mq(m) {
+            
+            text-align: center;
+        }
         @include mq(s) {
             font-size: 3rem;
-            text-align: center;
+
         }
     }
 
@@ -420,7 +435,7 @@
         justify-content: flex-end;
         align-items: center;
 
-        @include mq(s) {
+        @include mq(m) {
             justify-content: center;
         }
     }
@@ -433,7 +448,7 @@
 
 //footer
 .footer {
-    background-color: $heading;
+    background-color: rgba(31, 31, 31, 1);
     color: $reverse;
     padding: 8rem 0 0;
 
@@ -444,7 +459,7 @@
         align-items: flex-start;
         padding-bottom: 15rem;
 
-        @include mq(s) {
+        @include mq(m) {
             padding-bottom: 5rem;
         }
 
@@ -468,6 +483,10 @@
 
     }
 
+    &__col {
+        margin-bottom: 2rem;
+    }
+
     &__items {
         padding-inline-start: 0;
     }
@@ -477,20 +496,6 @@
         line-height: 3;
     }
 
-    &__links {
-        display: flex;
-        justify-content: space-between;
-
-        @include mq(s) {
-            flex-direction: column;
-            margin-top: 3rem;
-        }
-
-    }
-
-    &__col-3 {
-        flex-grow: 1;
-    }
 
     &__socials {
         margin-top: 4rem;

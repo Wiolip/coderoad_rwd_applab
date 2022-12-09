@@ -3,8 +3,13 @@ html {
 
 }
 
-body {
+*,
+::after,
+::before {
     box-sizing: border-box;
+}
+
+body {
     font-size: $text;
     font-family: $fontbase;
     line-height: $text-line;
@@ -95,33 +100,65 @@ li {
 
 // column
 
-.col--8 {
-    flex-basis: 59%;
+.col--7 {
+    flex-basis: 58.333333%;
+
+    @include mq(m) {
+        flex-basis: 50%;
+        max-width: 50%;
+
+    }
+
     @include mq(s) {
         flex-basis: 100%;
+        max-width: 50%;
 
     }
 }
 
 .col--6 {
-    flex-basis: 45%;
+    flex-basis: 50%;
+    max-width: 50%;
+
     @include mq(s) {
         flex-basis: 100%;
+        max-width: 100%;
 
     }
 
 }
-.col--6--m {
-    flex-basis: 49%;
-    @include mq(s) {
-        flex-basis: 100%;
+
+.col--5 {
+    flex-basis: 41.666667%;
+
+    @include mq(m) {
+        flex-basis: 50%;
+        max-width: 50%;
 
     }
 
+    @include mq(s) {
+        flex-basis: 100%;
+        max-width: 100%;
+
+    }
 }
 
 .col--4 {
-    flex-basis: 30%;
+    flex-basis: 33.333333%;
+
+    @include mq(s) {
+        flex-basis: 100%;
+        max-width: 100%;
+
+    }
+}
+
+.col--4--m {
+    @include mq(m) {
+        flex-basis: 50%;
+
+    }
     @include mq(s) {
         flex-basis: 100%;
 
@@ -130,31 +167,95 @@ li {
 
 .col--3 {
     flex-basis: 25%;
+
+    @include mq(s) {
+        flex-basis: 100%;
+        max-width: 100%;
+
+    }
+}
+
+.col--3--m {
+
+    @include mq(m) {
+        flex-basis: 50%;
+
+    }
     @include mq(s) {
         flex-basis: 100%;
 
     }
 
 }
+
+
 
 .col--2 {
-    flex-basis: 40%;
+    flex-basis: 16.666667%;
+
     @include mq(s) {
         flex-basis: 100%;
+        max-width: 100%;
+
 
     }
 }
 
-.col--12{
+.col--2--m {
+
+    @include mq(m) {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+    @include mq(s) {
+        flex-basis: 100%;
+        max-width: 100%;
+
+    }
+}
+
+
+
+.col--12 {
     flex-basis: 100%;
+
+
+}
+
+.col--12--m {
+    @include mq(m) {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
     @include mq(s) {
         flex-basis: 100%;
+        max-width: 100%;
 
     }
 }
 
+.col--2,
+.col--3,
+.col--4,
+.col--5,
+.col--6,
+.col--7,
+.col--12 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 
+.offset {
+    margin-left: 8.333333%;
 
+    @include mq(m) {
+        margin-left: 0;
+
+    }
+}
 
 
 
