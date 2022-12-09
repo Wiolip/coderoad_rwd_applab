@@ -4,12 +4,23 @@
 
 // nav
 .nav {
+   @include mq(m){
+    background-color: $heading;
+    z-index: 10;
+   }
 
     &-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+
+        @include mq(m) {
+            display: block;
+            padding-bottom: 2rem;
+
+        }
+
     }
 
     &__items {
@@ -18,14 +29,17 @@
         align-items: center;
 
         @include mq(m) {
+            background-color: #4c4c4c;
+            margin-top: 0;
             display: none;
-        }
 
+        }
 
     }
 
     &__item {
         padding: 2rem;
+
 
     }
 
@@ -33,7 +47,52 @@
         color: $reverse;
     }
 
+    &__logo {
+        width: 10rem;
+    }
+
+    .btn {
+        @include mq(m) {
+            display: none;
+        }
+    }
+
+    &__mobile {
+        display: none;
+
+        @include mq(m) {
+            display: flex;
+            justify-content: flex-end;
+            color: $reverse;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.5rem;
+            padding: .7rem;
+            background-color: #4c4c4c;
+            margin-bottom: 0;
+        }
+    }
+
+    .mobile__name {
+        background-color: $heading;
+        padding: .5rem 2.7rem .5rem .7rem;
+        position: relative;
+        border-radius: .5rem;
+
+        &::before {
+            position: absolute;
+            display: block;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: '\f0c9';
+            right: 1rem;
+
+
+        }
+    }
 }
+
+
 
 
 
@@ -46,14 +105,17 @@
     background-size: 100% 100%;
     margin-bottom: 3rem;
 
+
     @include mq(m) {
-        height: 50rem;
+        height: 70rem;
+
+    }
+    @include mq(s) {
+        height: 90rem;
+        margin-bottom: 9rem;
+
     }
 
-    @include mq(s) {
-        height: 80rem;
-        margin-bottom: 10rem;
-    }
 
 }
 
@@ -116,6 +178,7 @@
 
         @include mq(m) {
             margin-top: 0;
+            width: 100%;
 
         }
 
@@ -201,6 +264,7 @@
 
     &__images-left {
         width: auto;
+
         @include mq(s) {
             width: 100%;
         }
@@ -338,6 +402,7 @@
         @include mq(m) {
             font-size: 3.6rem;
         }
+
         @include mq(s) {
             font-size: 3rem;
         }
@@ -424,10 +489,12 @@
 
     &__title {
         color: $reverse;
+
         @include mq(m) {
 
             text-align: center;
         }
+
         @include mq(s) {
             font-size: 3rem;
 
